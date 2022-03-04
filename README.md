@@ -2,7 +2,7 @@ Ananya Mathur, 2020CS50416
 
 ML-Lex for LEXING, ML-YACC for PARSING
 
-This folder contains while_ast.sml, while_ast.lex, while_ast.yacc, while_ast.cm, compiler.sml
+This folder contains while_ast.sml, while_ast.lex, while_ast.yacc, while_ast.cm, compiler.sml, glue.sml and README
 
 ## AST DATATYPE DEFINITION
 
