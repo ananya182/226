@@ -62,23 +62,23 @@ Variable ::= IDEN
 
 ## FunStack IMPLEMENTATION
 
-Implemented a general-purpose functional stack structure as mentioned in the assignment with all required Stack functions.
+Implemented a general-purpose functional stack structure as mentioned in the assignment with all required Stack functions in vmc.sml. 
 
 ## Memory M
 
-Allocated space for variables as an Array.array
+Allocated space for variables as an Array.array in vmc.sml.
 
 ## Vmc structure
 
-I have defined type VMC = 'a Stack * Array.array * 'a Stack
+I have defined type VMC = 'a Stack * Array.array * 'a Stack in vmc.sml.
 
 ## Semantic Rules
 
-Implemented semantic rules using the function rules which takes VMC as input (one configuration) and using pattern matching applies the relevant semantic rule (using stack operations) to output a VMC configuration.
+Implemented semantic rules using the function rules which takes VMC as input (one configuration) and using pattern matching applies the relevant semantic rule (using stack operations) to output a VMC configuration in vmc.sml.
 
 ## postfix function
 
-This is a recursive function which returns postfix of a program (as a' list) given as input in the form of an AST.
+This is a recursive function which returns postfix of a program (as a' list) given as input in the form of an AST. It is present in while_ast.sml .
 
 ## execute function
 
@@ -89,4 +89,4 @@ execute function takes postfix of a program as list as input and outputs a VMC (
 
 1. http://rogerprice.org/ug/ug.pdf : referred to pi.lex, pi.yacc, compiler.sml, datatypes,sml, pi.cm for lexing, parsing
 2. https://github.com/arch1902/COL226-PL-Assignments/blob/main/A2%20-%20Lexer%20and%20Parser%20of%20Boolean%20Algebra/a2.yacc : Github repo of Senior, Referred for defining format of grammar in while_ast.yacc
-3. 
+3. http://www.cs.cornell.edu/courses/cs312/2005sp/lectures/rec07.html https://smlfamily.github.io/Basis/list.html#SIG:LIST.mapPartial:VAL https://www.cs.cornell.edu/courses/cs312/2008sp/recitations/rec05.html https://condor.depaul.edu/ichu/csc447/notes/wk8/ml.html : Implementation of Stack functions
