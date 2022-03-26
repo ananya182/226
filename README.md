@@ -2,7 +2,7 @@ Ananya Mathur, 2020CS50416
 
 ML-Lex for LEXING, ML-YACC for PARSING
 
-This folder contains while_ast.sml, while_ast.lex, while_ast.yacc, while_ast.cm, compiler.sml, glue.sml and README
+This folder contains while_ast.sml, while_ast.lex, while_ast.yacc, while_ast.cm, compiler.sml, glue.sml, vmc.sml and README
 
 ## AST DATATYPE DEFINITION
 
@@ -60,7 +60,33 @@ NOT Expression
 
 Variable ::= IDEN
 
+## FunStack IMPLEMENTATION
+
+Implemented a general-purpose functional stack structure as mentioned in the assignment with all required Stack functions.
+
+## Memory M
+
+Allocated space for variables as an Array.array
+
+## Vmc structure
+
+I have defined type VMC = 'a Stack * Array.array * 'a Stack
+
+## Semantic Rules
+
+Implemented semantic rules using the function rules which takes VMC as input (one configuration) and using pattern matching applies the relevant semantic rule (using stack operations) to output a VMC configuration.
+
+## postfix function
+
+This is a recursive function which returns postfix of a program (as a' list) given as input in the form of an AST.
+
+## execute function
+
+execute function takes postfix of a program as list as input and outputs a VMC (final configuration). It calls a function f, which recursively calls itself after application of rules on the current VMC configuration.
+ 
+
 ## ACKNOWLEDGEMENTS
 
 1. http://rogerprice.org/ug/ug.pdf : referred to pi.lex, pi.yacc, compiler.sml, datatypes,sml, pi.cm for lexing, parsing
 2. https://github.com/arch1902/COL226-PL-Assignments/blob/main/A2%20-%20Lexer%20and%20Parser%20of%20Boolean%20Algebra/a2.yacc : Github repo of Senior, Referred for defining format of grammar in while_ast.yacc
+3. 
